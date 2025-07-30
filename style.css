@@ -1,0 +1,162 @@
+/* =========================================================
+   Estilos CV - Tema Oscuro Minimalista
+   ---------------------------------------------------------
+   - Fondo gris muy oscuro
+   - Texto claro
+   - Sin líneas azules separadoras (según pedido)
+   - Tipografía Inter (Google Fonts cargada en index.html)
+   - Layout centrado, ancho máx 800px
+   ========================================================= */
+
+:root {
+  --bg: #232f3e;
+  --bg-card: transparent;
+  --text: #e7e9ec;
+  --text-subtle: #b3b8c2;
+  --accent: #4da3ff;
+  --radius: 10px;
+  --space: 20px;
+  --font-size-base: 16px;
+  --line-height: 1.6;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --font-size-base: 17px;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  color-scheme: dark;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Sailec, 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: calc(var(--space) * 2) var(--space) calc(var(--space) * 4);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: calc(var(--space) * 2.5);
+}
+
+.profile-pic {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--space);
+  border: 2px solid rgba(255,255,255,0.1);
+}
+
+h1 {
+  margin: 0 0 0.25em;
+  font-size: 2.25em;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 0 0 0.75em;
+  color: var(--text-subtle);
+  font-weight: 400;
+}
+
+.contact {
+  margin: 0;
+  font-size: 0.95em;
+  color: var(--accent);
+}
+
+.contact .dot {
+  margin: 0 0.4em;
+  color: var(--text-subtle);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+main section {
+  margin-bottom: calc(var(--space) * 2.5);
+}
+
+h2 {
+  margin: 0 0 0.75em;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.job {
+  margin-bottom: var(--space);
+}
+
+.job h3 {
+  margin: 0 0 0.25em;
+  font-size: 1.125em;
+  font-weight: 600;
+}
+
+.job h3 span {
+  font-weight: 400;
+  color: var(--text-subtle);
+  font-size: 0.95em;
+}
+
+.job ul {
+  margin: 0 0 0 1.25em;
+  padding: 0;
+  list-style: disc;
+}
+
+.job ul li {
+  margin-bottom: 0.25em;
+}
+
+.footer {
+  margin-top: calc(var(--space) * 4);
+  text-align: center;
+  font-size: 0.9em;
+  color: var(--text-subtle);
+}
+
+/* ----------------------------------------------
+   OPCIONAL: prefer-color-scheme: light
+   Si en algún momento quieres soportar tema claro
+   descomenta el bloque siguiente y ajusta colores.
+---------------------------------------------- */
+/*
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #232f3e;
+    --bg-card: #232f3e;
+    --text: #242424;
+    --text-subtle: #555;
+    --accent: #0077b6;
+  }
+  body { background: var(--bg); color: var(--text); }
+  .profile-pic { border-color: rgba(0,0,0,0.1); }
+  .footer { color: var(--text-subtle); }
+}
+*/
